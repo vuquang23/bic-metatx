@@ -17,6 +17,7 @@ contract BicMetatx is AccessControlEnumerable, Pausable, NativeMetaTransaction, 
     address public bicAddress;
 
     constructor(address _admin, address _bicAddress) {
+        super._initializeEIP712("BicMetatx");
         admin = _admin;
         bicAddress = _bicAddress;
         _setupRole(DEFAULT_ADMIN_ROLE, admin);
