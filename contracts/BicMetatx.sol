@@ -7,7 +7,7 @@ import {SafeMath} from  "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "./metatx/NativeMetaTransaction.sol";
 import "./metatx/ContextMixin.sol";
 
-contract BicMetatx is AccessControlEnumerable, Pausable, NativeMetaTransaction,   {
+contract BicMetatx is AccessControlEnumerable, Pausable, NativeMetaTransaction, ContextMixin {
     using SafeMath for uint256;
 
     bytes32 public constant TRANSFER_ROLE = keccak256("TRANSFER_ROLE");
